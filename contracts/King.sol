@@ -30,18 +30,22 @@ contract King {
   function tokenFallback (address from, uint256 value, bytes _dc) public {
     require(value >= PLAY_COST);
     require(msg.sender == address(flexbuxx));
-    prize += PLAY_COST - FEE_COST;
-    fees += FEE_COST;
+
     address oldKing = king;
     uint oldCoronation = coronation;
 
     king = from;
     coronation = now;
+    fees += FEE_COST;
 
     if (now >= oldCoronation + 30 minutes) {
       bytes memory empty;
+      prize = PLAY_COST - FEE_COST;
       flexbuxx.transfer(oldKing, prize, empty);
+    } else {
+      prize += PLAY_COST - FEE_COST;
     }
+
     emit NewKing(from);
   }
 
