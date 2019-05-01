@@ -1,0 +1,27 @@
+{
+  "name": "king",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abcoathup/king.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abcoathup/king/issues"
+  },
+  "homepage": "https://github.com/abcoathup/king#readme",
+  "devDependencies": {
+    "dotenv": "^7.0.0",
+    "openzeppelin-test-helpers": "^0.3.2",
+    "truffle-hdwallet-provider": "^1.0.8"
+  }
+}
