@@ -1,6 +1,6 @@
 var King = artifacts.require("./King.sol");
 
 module.exports = function(deployer) {
-  var paymentTokenAddress = "0xe0728a9d55ebd03bfcc6e9faa59e6dfe96741636";  
+  var paymentTokenAddress = "0x5eb7E67eC2CE404EbAbafED0A79BaB10D030c58a";  
   deployer.deploy(King, paymentTokenAddress);
 };
