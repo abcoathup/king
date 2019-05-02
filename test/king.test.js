@@ -44,7 +44,7 @@ contract('King', function([admin, anotherAccount, yetAnotherAccount, buxxAccount
 
     it('new king with prize', async function() {
       await buxx.methods['transfer(address,uint256,bytes)'](king.address, kingPlay, "0x", {from: anotherAccount} )
-      await time.increase(time.duration.minutes(30))
+      await time.increase(time.duration.minutes(5))
       await buxx.methods['transfer(address,uint256,bytes)'](king.address, kingPlay, "0x", {from: yetAnotherAccount} )
       var _king = await king.king();
       assert.equal(yetAnotherAccount, _king);

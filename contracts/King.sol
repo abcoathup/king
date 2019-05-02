@@ -18,7 +18,7 @@ contract King {
   uint public fees;
   uint public coronation;
 
-  event NewKing(address pushed);
+  event NewKing(address newKing);
     
   function King (address _fb) public {
      flexbuxx = TOKEN(_fb);
@@ -38,7 +38,7 @@ contract King {
     coronation = now;
     fees += FEE_COST;
 
-    if (now >= oldCoronation + 30 minutes) {
+    if (now >= oldCoronation + 5 minutes) {
       bytes memory empty;
       prize = PLAY_COST - FEE_COST;
       flexbuxx.transfer(oldKing, prize, empty);
